@@ -1,4 +1,4 @@
-<?php
+            <?php
             session_start();
             if (isset($_GET['x']) && $_GET['x'] == 'Home') {
                 $page = 'home.php';

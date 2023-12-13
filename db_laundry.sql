@@ -17,16 +17,20 @@
 -- Dumping structure for table db_laundry.tb_user
 CREATE TABLE IF NOT EXISTS `tb_user` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nama` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `username` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `level` int DEFAULT NULL,
+  `nohp` int DEFAULT NULL,
+  `alamat` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_laundry.tb_user: ~0 rows (approximately)
+-- Dumping data for table db_laundry.tb_user: ~2 rows (approximately)
 DELETE FROM `tb_user`;
-INSERT INTO `tb_user` (`id`, `username`, `password`, `level`) VALUES
-	(1, 'admin@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 1);
+INSERT INTO `tb_user` (`id`, `nama`, `username`, `password`, `level`, `nohp`, `alamat`) VALUES
+	(1, 'zulfi', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 1, 8192312, 'banda aceh'),
+	(2, 'Ella', 'ella@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 2, 12312312, 'asdasfawfa');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
