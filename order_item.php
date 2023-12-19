@@ -1,7 +1,7 @@
 <?php
 include "proses/connect.php";
 
-$query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya FROM tb_list_order
+$query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya, tb_order.waktu_order FROM tb_list_order
     LEFT JOIN tb_order ON tb_order.id_order = tb_list_order.kode_order
     LEFT JOIN tb_daftar_menu ON tb_daftar_menu.id = tb_list_order.menu
     LEFT JOIN tb_bayar ON tb_bayar.id_bayar = tb_order.id_order
@@ -371,23 +371,55 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
             <div>
                 <button class="<?php echo(!empty($row['id_bayar'])) ? "btn btn-secondary disabled" : "btn btn-success" ; ?>" data-bs-toggle="modal" data-bs-target="#tambahItem"><i class="bi bi-plus-circle-fill"></i> Item</button>
                 <button class="<?php echo(!empty($row['id_bayar'])) ? "btn btn-secondary disabled" : "btn btn-primary" ; ?>" data-bs-toggle="modal" data-bs-target="#bayar"><i class="bi bi-cash-coin"></i> Bayar</button>
-                <button class="btn btn-info">Cetak Struk</button>
+                <button onclick="printStruk()" class="btn btn-info">Cetak Struk</button>
             </div>
         </div>
     </div>
 </div>
 
 
-<div>
+<div id="strukContent" class="d-none">
     <h2>Struk Pembayaran Laundry Zulfi</h2>
-    <p>Kode Order : </p>
-    <p>Pelanggan : </p>
-    <p>Waktu Order</p>
+    <p>Kode Order : <?php echo $kode ?></p>
+    <p>Pelanggan : <?php echo $pelanggan ?> </p>
+    <p>Waktu Order : <?php echo date('d/m/Y H:i:s', strtotime($result[0]['waktu_order'])) ?> </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu</th>
+                <th>Harga</th>
+                <th>Qty</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($result as $row) { ?>
+            <tr>
+                <td><?php echo $row['nama_menu'] ?></td>
+                <td><?php echo number_format($row['harga'], 0,',','.') ?></td>
+                <td><?php echo $row['jumlah'] ?></td>
+                <td><?php echo number_format($row['harganya'], 0,',','.') ?></td>
+            </tr>
+            <?php }?>
+        </tbody>
+    </table>
 </div>
 
 
 <script>
+
+    function printStruk(){
+        var strukContent = document.getElementById("strukContent").innerHTML;
+        var printFrame = document.createElement('iframe');
+        printFrame.style.display="none";
+        document.body.appendChild(printFrame);
+        printFrame.contentDocument.write(strukContent);
+        printFrame.contentWindow.print();
+        document.body.removeChild(printFrame);
+    }
+    
     // Example starter JavaScript for disabling form submissions if there are invalid fields
+    
     (() => {
         'use strict'
 
