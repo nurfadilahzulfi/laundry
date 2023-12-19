@@ -5,11 +5,12 @@
 ?>
 <nav class="navbar navbar-expand navbar-dark bg-primary sticky-top">
     <div class="container-lg">
-        <a class="navbar-brand" href="."><i class="bi bi-bucket"></i> Laundry Zulfi</a>
+        <a class="navbar-brand" href="."></a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/img/user.jpg" alt="mdo" width="36" height="36" class="rounded-circle">
                         <?php
                         echo $hasil['username'];
                         ?>

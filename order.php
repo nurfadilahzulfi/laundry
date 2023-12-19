@@ -31,7 +31,7 @@ while ($record = mysqli_fetch_array($query)) {
                 <div class="modal-dialog modal-lg modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Order Makanan dan Minuman</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Order Cucian</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -82,7 +82,7 @@ while ($record = mysqli_fetch_array($query)) {
 
             <?php
             if (empty($result)) {
-                echo "Data menu makanan atau minuman tidak ada";
+                echo "Data order tidak ada";
             } else {
             foreach ($result as $row) {
             ?>

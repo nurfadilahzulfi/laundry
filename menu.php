@@ -11,7 +11,7 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
 <div class="col-lg-9 mt-2">
     <div class="card">
         <div class="card-header">
-            Halaman Menu
+            Halaman Paket Cucian
         </div>
         <div class="card-body">
             <div class="row">

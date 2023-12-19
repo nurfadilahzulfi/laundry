@@ -11,52 +11,63 @@
 	<title>Laundry Zulfi | Login</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/login.css" class="href">
     <!-- link icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-<section class="vh-100">
-  <div class="container h-100">
-    <div class="row d-flex align-items-center justify-content-center h-100">
-      <div class="col-md-8 col-lg-7 col-xl-6">
-        <img src="assets/img/laundry.png" class="img-fluid" alt="Phone image" style="width: 600; height: 600px;">
-      </div>
-      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-	  <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
-            <h1 class="h3 mb-3 fw-bold text-center">Please login</h1>
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
+      <img src="assets/img/logo.gif" alt="" style="height: 500px;">
+    </div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h2 class="login-heading mb-4">Login !</h2>
 
-            <div class="form-floating">
+              <!-- Sign In Form -->
+              <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
+                <div class="form-floating mb-3">
                 <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
                 <div class="invalid-feedback">
                     Masukkan Email yang valid.
                 </div>
-            </div>
-            <div class="form-floating">
+                </div>
+                <div class="form-floating mb-3">
                 <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
                 <div class="invalid-feedback">
                     Masukkan Password.
                 </div>
-            </div>
-
-            <div class="d-flex justify-content  my-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Remember me
-                    </label>
                 </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                  <label class="form-check-label" for="rememberPasswordCheck">
+                    Remember password
+                  </label>
+                </div>
+
+                <div class="d-grid">
+                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" name="submit_validate" value="abc" type="submit">Sign in</button>
+                </div>
+              </form>
+              <p class="text-center">
+                Username : admin@admin.com <br>
+                Password : password
+              </p>
             </div>
-            <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc" >Login</button>
-        </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"> </script>
 </body>
 </html>
