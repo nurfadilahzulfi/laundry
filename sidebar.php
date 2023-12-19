@@ -38,15 +38,7 @@
                             if($hasil['level']==1 || $hasil['level']==2 || $hasil['level']==3) {
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'Order') ? 'active link-light' : 'link-dark' ; ?>" href="Order"><i class="bi bi-cart4"></i> Order</a>
-                        </li>
-                        <?php } ?>
-
-                        <?php 
-                            if($hasil['level']==1 || $hasil['level']==4) {
-                        ?>
-                        <li class="nav-item">
-                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'dapur') ? 'active link-light' : 'link-dark' ; ?>" href="dapur"><i class="bi bi-fire"></i> Dapur</a>
+                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'Order') ? 'active link-light' : 'link-dark' ; ?>" href="Order"><i class="bi bi-cart4"></i> Order Cucian</a>
                         </li>
                         <?php } ?>
 

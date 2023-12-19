@@ -5,7 +5,7 @@
 ?>
 <nav class="navbar navbar-expand navbar-dark bg-primary sticky-top">
     <div class="container-lg">
-        <a class="navbar-brand" href="."></a>
+        <a class="navbar-brand" href="."><h4>Laundry Zulfi</h4></a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">

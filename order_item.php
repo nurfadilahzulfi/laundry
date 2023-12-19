@@ -378,7 +378,40 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
 </div>
 
 
+
 <div id="strukContent" class="d-none">
+<style>
+    #struk{
+        font-family: "Arial",sans-serif;
+        font-size: 12px;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 60mm;
+    }
+    #struk h2{
+        text-align: center;
+        color: #333;
+    }
+    #struk p{
+        margin: 5px 0;
+    }
+    #struk table{
+        font-size: 12px;
+        border-collapse: collapse;
+        margin-top: 10px;
+        width: 100%;
+    }
+    #struk th, #struk td{
+        border: 1px solid #ddd;
+        padding: #px;
+        text-align: left;
+    }
+    #struk .total{
+        font-weight: bold;
+    }
+</style>
+<div id="struk">
     <h2>Struk Pembayaran Laundry Zulfi</h2>
     <p>Kode Order : <?php echo $kode ?></p>
     <p>Pelanggan : <?php echo $pelanggan ?> </p>
@@ -393,16 +426,25 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($result as $row) { ?>
+            <?php
+            $total = 0;
+            foreach ($result as $row) { ?>
             <tr>
                 <td><?php echo $row['nama_menu'] ?></td>
                 <td><?php echo number_format($row['harga'], 0,',','.') ?></td>
                 <td><?php echo $row['jumlah'] ?></td>
                 <td><?php echo number_format($row['harganya'], 0,',','.') ?></td>
             </tr>
-            <?php }?>
+            <?php
+                $total += $row['harganya'];
+            } ?>
+            <tr class="total">
+                <td colspan="3">Total Harga</td>
+                <td><?php echo number_format($total, 0,',','.') ?></td>
+            </tr>
         </tbody>
     </table>
+    </div>
 </div>
 
 
