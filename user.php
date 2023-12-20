@@ -52,9 +52,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             <select class="form-select" aria-label="Default select example" name="level" required>
                                                 <option selected hidden value="">Pilih Lever User</option>
                                                 <option value="1">Owner/Admin</option>
-                                                <option value="2">Kasir</option>
-                                                <option value="3">Pelayan</option>
-                                                <option value="4">Dapur</option>
+                                                <option value="2">Pegawai</option>
                                             </select>
                                             <label for="floatingInput">Level User</label>
                                             <div class="invalid-feedback">
@@ -203,7 +201,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             <div class="form-floating mb-3">
                                                 <select class="form-select" aria-label="Default selecct example" required name="level" id="">
                                                     <?php
-                                                    $data = array("Owner/Admin", "Kasir", "Pelayan", "Dapur");
+                                                    $data = array("Owner/Admin", "Pegawai");
                                                     foreach ($data as $key => $value) {
                                                         if ($row['level'] == $key + 1) {
                                                             echo "<option selected value =".($key+1).">$value</option>";
@@ -344,11 +342,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         if ($row['level'] == 1) {
                                             echo "Admin";
                                         } elseif ($row['level'] == 2) {
-                                            echo "Kasir";
-                                        } elseif ($row['level'] == 3) {
-                                            echo "Pelayan";
-                                        } elseif ($row['level'] == 4) {
-                                            echo 'Dapur';
+                                            echo "Pegawai";
                                         }
                                         ?>
                                     </td>

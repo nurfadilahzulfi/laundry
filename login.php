@@ -57,7 +57,7 @@
                 </div>
               </form>
               <p class="text-center">
-                Username : admin@admin.com <br>
+                Username : admin@gmail.com <br>
                 Password : password
               </p>
             </div>
