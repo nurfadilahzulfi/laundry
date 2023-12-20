@@ -40,7 +40,6 @@ while ($record = mysqli_fetch_array($query)) {
                             <th scope="col">Waktu Order</th>
                             <th scope="col">Waktu Bayar</th>
                             <th scope="col">Pelanggan</th>
-                            <th scope="col">Meja</th>
                             <th scope="col">Total Harga</th>
                             <th scope="col">Pelayan</th>
                             <th scope="col">Aksi</th>
@@ -66,9 +65,6 @@ while ($record = mysqli_fetch_array($query)) {
                             </td>
                             <td>
                                 <?php echo $row['pelanggan'] ?>
-                            </td>
-                            <td>
-                                <?php echo $row['meja'] ?>
                             </td>
                             <td>
                                 <?php echo number_format((int)$row['harganya'], 0, ',', '.') ?>

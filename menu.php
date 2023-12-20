@@ -351,7 +351,6 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                             <th scope="col">Foto Menu</th>
                             <th scope="col">Nama Menu</th>
                             <th scope="col">Keterangan</th>
-                            <th scope="col">Jenis Menu</th>
                             <th scope="col">Kategori</th>
                             <th scope="col">Harga</th>
                             <th scope="col">Stok</th>
@@ -377,9 +376,6 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                             </td>
                             <td>
                                 <?php echo $row['keterangan'] ?>
-                            </td>
-                            <td>
-                                <?php echo ($row['jenis_menu'] == 1) ? "Makanan" : "Minuman" ?>
                             </td>
                             <td>
                                 <?php echo $row['kategori_menu'] ?>

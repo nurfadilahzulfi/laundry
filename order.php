@@ -46,16 +46,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
-                                        <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="meja"
-                                                placeholder="Nomor Meja" name="meja" required>
-                                            <label for="meja">Meja</label>
-                                            <div class="invalid-feedback">
-                                                Masukkan Meja.
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="col-lg-7">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="pelanggan"
@@ -108,16 +99,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
-                                        <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="meja"
-                                                placeholder="Nomor Meja" name="meja" required value="<?php echo $row['meja'] ?>">
-                                            <label for="meja">Meja</label>
-                                            <div class="invalid-feedback">
-                                                Masukkan Meja.
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-lg-7">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="pelanggan"
@@ -181,7 +163,6 @@ while ($record = mysqli_fetch_array($query)) {
                             <th scope="col">No</th>
                             <th scope="col">Kode Order</th>
                             <th scope="col">Pelanggan</th>
-                            <th scope="col">Meja</th>
                             <th scope="col">Total Harga</th>
                             <th scope="col">Pelayan</th>
                             <th scope="col">Status</th>
@@ -205,9 +186,6 @@ while ($record = mysqli_fetch_array($query)) {
                                 <?php echo $row['pelanggan'] ?>
                             </td>
                             <td>
-                                <?php echo $row['meja'] ?>
-                            </td>
-                            <td>
                                 <?php echo number_format((int)$row['harganya'], 0, ',', '.') ?>
                             </td>
                             <td>
@@ -221,7 +199,7 @@ while ($record = mysqli_fetch_array($query)) {
                             </td>
                             <td>
                                 <div class="d-flex">
-                                    <a class="btn btn-info btn-sm me-1" href="./?x=orderitem&order=<?php echo $row['id_order']."&meja=".$row['meja']."&pelanggan=".$row['pelanggan'] ?>"><i
+                                    <a class="btn btn-info btn-sm me-1" href="./?x=orderitem&order=<?php echo $row['id_order']."&pelanggan=".$row['pelanggan'] ?>"><i
                                             class="bi bi-eye"></i></a>
                                             <button class="<?php echo(!empty($row['id_bayar'])) ? "btn btn-secondary btn-sm me-1 disabled" : "btn btn-warning btn-sm me-1" ; ?>" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $row['id_order'] ?>"><i class="bi bi-pencil-square"></i></i></button>
                                             <button class="<?php echo(!empty($row['id_bayar'])) ? "btn btn-secondary btn-sm me-1 disabled" : "btn btn-danger btn-sm me-1" ; ?>" data-bs-toggle="modal" data-bs-target="#ModalDelete<?php echo $row['id_order'] ?>"><i class="bi bi-trash"></i></i></button>

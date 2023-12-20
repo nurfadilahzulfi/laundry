@@ -9,7 +9,7 @@ $query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya, tb_order.
     HAVING tb_list_order.kode_order = $_GET[order]");
 
 $kode = $_GET['order'];
-$meja = $_GET['meja'];
+//$meja = $_GET['meja'];
 $pelanggan = $_GET['pelanggan'];
 
 while ($record = mysqli_fetch_array($query)) {
@@ -35,12 +35,6 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                         <label for="uploadFoto">Kode Order</label>
                     </div>
                 </div>
-                <div class="col-lg-2">
-                    <div class="form-floating mb-3">
-                        <input disabled type="text" class="form-control" id="meja" value="<?php echo $meja ?>">
-                        <label for="uploadFoto">Meja</label>
-                    </div>
-                </div>
                 <div class="col-lg-3">
                     <div class="form-floating mb-3">
                         <input disabled type="text" class="form-control" id="pelanggan" value="<?php echo $pelanggan ?>">
@@ -53,13 +47,12 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                 <div class="modal-dialog modal-lg modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Cucian</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form form class="needs-validation" novalidate action="proses/proses_input_orderitem.php" method="post">
                                 <input type="hidden" name="kode_order" value="<?php echo $kode ?>">
-                                <input type="hidden" name="meja" value="<?php echo $meja ?>">
                                 <input type="hidden" name="pelanggan" value="<?php echo $pelanggan ?>">
                                 <div class="row">
                                     <div class="col-lg-8">
@@ -72,7 +65,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                                 }
                                                 ?>
                                             </select>
-                                            <label for="menu">Menu Makanan/Minuman</label>
+                                            <label for="menu">Jenis Cucian</label>
                                             <div class="invalid-feedback">
                                                 Pilih Menu.
                                             </div>
@@ -81,9 +74,9 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                     <div class="col-lg-4">
                                         <div class="form-floating mb-3">
                                             <input type="number" class="form-control" id="floatingInput" placeholder="Jumlah Porsi" name="jumlah" required>
-                                            <label for="floatingInput">Jumlah Porsi</label>
+                                            <label for="floatingInput">Berat Pakaian</label>
                                             <div class="invalid-feedback">
-                                                Masukkan Jumlah Porsi.
+                                                Masukkan Berat Pakaian.
                                             </div>
                                         </div>
                                     </div>
@@ -120,14 +113,13 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                         <div class="modal-dialog modal-lg modal-fullscreen-md-down">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Cucian</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form form class="needs-validation" novalidate action="proses/proses_edit_orderitem.php" method="post">
                                         <input type="hidden" name="id" value="<?php echo $row['id_list_order'] ?>">
                                         <input type="hidden" name="kode_order" value="<?php echo $kode ?>">
-                                        <input type="hidden" name="meja" value=" <?php echo $meja ?>">
                                         <input type="hidden" name="pelanggan" value="<?php echo $pelanggan ?>">
                                         <div class="row">
                                             <div class="col-lg-8">
@@ -144,7 +136,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                                         }
                                                         ?>
                                                     </select>
-                                                    <label for="menu">Menu Makanan/Minuman</label>
+                                                    <label for="menu">Jenis Cucian</label>
                                                     <div class="invalid-feedback">
                                                         Pilih Menu.
                                                     </div>
@@ -153,9 +145,9 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                             <div class="col-lg-4">
                                                 <div class="form-floating mb-3">
                                                     <input type="number" class="form-control" id="floatingInput" placeholder="Jumlah Porsi" name="jumlah" required value="<?php echo $row['jumlah'] ?>">
-                                                    <label for="floatingInput">Jumlah Porsi</label>
+                                                    <label for="floatingInput">Berat Pakaian</label>
                                                     <div class="invalid-feedback">
-                                                        Masukkan Jumlah Porsi.
+                                                        Masukkan Berat Pakaian.
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,7 +184,6 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                     <form form class="needs-validation" novalidate action="proses/proses_delete_orderitem.php" method="post">
                                         <input type="hidden" value="<?php echo $row['id_list_order'] ?>" name="id">
                                         <input type="hidden" name="kode_order" value="<?php echo $kode ?>">
-                                        <input type="hidden" name="meja" value="<?php echo $meja ?>">
                                         <input type="hidden" name="pelanggan" value="<?php echo $pelanggan ?>">
                                         <div class="col-lg-12">
                                             Apakah anda ingin menghapus menu <b><?php echo $row['nama_menu'] ?></b>
@@ -275,7 +266,6 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                 <span class="text-danger fs-5 fw-semibold">Apakah Anda Yakin Ingin Melakukan Pembayaran?</span>
                                 <form form class="needs-validation" novalidate action="proses/proses_bayar.php" method="post">
                                     <input type="hidden" name="kode_order" value="<?php echo $kode ?>">
-                                    <input type="hidden" name="meja" value="<?php echo $meja ?>">
                                     <input type="hidden" name="pelanggan" value="<?php echo $pelanggan ?>">
                                     <input type="hidden" name="total" value="<?php echo $total ?>">
                                     <div class="row">

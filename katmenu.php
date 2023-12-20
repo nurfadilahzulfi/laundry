@@ -155,7 +155,6 @@ while ($record = mysqli_fetch_array($query)) {
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Jenis Menu</th>
                                 <th scope="col">Kategori Menu</th>
                                 <th scope="col">Aksi</th>
                             </tr>
@@ -169,9 +168,6 @@ while ($record = mysqli_fetch_array($query)) {
                                     <th scope="row">
                                         <?php echo $no++ ?>
                                     </th>
-                                    <td>
-                                        <?php echo ($row['jenis_menu']==1) ? "Express" : "Reguler" ?>
-                                    </td>
                                     <td>
                                         <?php echo $row['kategori_menu'] ?>
                                     </td>
