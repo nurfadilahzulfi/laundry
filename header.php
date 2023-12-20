@@ -12,7 +12,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="assets/img/user.jpg" alt="mdo" width="36" height="36" class="rounded-circle">
                         <?php
-                        echo $hasil['username'];
+                        echo $hasil['nama'];
                         ?>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end mt-2">
