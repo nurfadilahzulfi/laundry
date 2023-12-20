@@ -14,9 +14,9 @@ $pelanggan = $_GET['pelanggan'];
 
 while ($record = mysqli_fetch_array($query)) {
     $result[] = $record;
-    // $kode = $record['id_order'];
-    // $meja = $record['meja'];
-    // $pelanggan = $record['pelanggan'];
+    //$kode = $record['id_order'];
+    //$meja = $record['meja'];
+    //$pelanggan = $record['pelanggan'];
 }
 
 $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
@@ -127,7 +127,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                                     <form form class="needs-validation" novalidate action="proses/proses_edit_orderitem.php" method="post">
                                         <input type="hidden" name="id" value="<?php echo $row['id_list_order'] ?>">
                                         <input type="hidden" name="kode_order" value="<?php echo $kode ?>">
-                                        <input type="hidden" name="meja" value="<?php echo $meja ?>">
+                                        <input type="hidden" name="meja" value=" <?php echo $meja ?>">
                                         <input type="hidden" name="pelanggan" value="<?php echo $pelanggan ?>">
                                         <div class="row">
                                             <div class="col-lg-8">

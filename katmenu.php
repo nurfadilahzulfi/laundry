@@ -22,7 +22,7 @@ while ($record = mysqli_fetch_array($query)) {
                 <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Ktegori Menu</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Kategori Menu</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -82,7 +82,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         <div class="form-floating mb-3">
                                         <select class="form-select" aria-label="Default selecct example" required name="jenismenu" id="">
                                                     <?php
-                                                    $data = array("Makanan", "Minuman");
+                                                    $data = array("Express", "Reguler");
                                                     foreach ($data as $key => $value) {
                                                         if ($row['jenis_menu'] == $key + 1) {
                                                             echo "<option selected value =".($key+1).">$value</option>";
@@ -170,7 +170,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         <?php echo $no++ ?>
                                     </th>
                                     <td>
-                                        <?php echo ($row['jenis_menu']==1) ? "Makanan" : "Minuman" ?>
+                                        <?php echo ($row['jenis_menu']==1) ? "Express" : "Reguler" ?>
                                     </td>
                                     <td>
                                         <?php echo $row['kategori_menu'] ?>

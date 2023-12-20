@@ -26,7 +26,7 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                 <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Cucian</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -75,9 +75,9 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                                     }
                                                 ?>
                                             </select>
-                                            <label for="floatingInput">Kategori Makanan atau Minuman</label>
+                                            <label for="floatingInput">Kategori Cucian</label>
                                             <div class="invalid-feedback">
-                                                Pilih Kategori Makanan atau Minuman.
+                                                Pilih Kategori Cucian.
                                             </div>
                                         </div>
                                     </div>
@@ -128,7 +128,7 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                 <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Cucian</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -170,9 +170,9 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                                     }
                                                 ?>
                                             </select>
-                                            <label for="floatingInput">Kategori Makanan atau Minuman</label>
+                                            <label for="floatingInput">Kategori Cucian</label>
                                             <div class="invalid-feedback">
-                                                Pilih Kategori Makanan atau Minuman.
+                                                Pilih Kategori Cucian.
                                             </div>
                                         </div>
                                     </div>
@@ -217,7 +217,7 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                 <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Cucian</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -270,9 +270,9 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                                     }
                                                 ?>
                                             </select>
-                                            <label for="floatingInput">Kategori Makanan atau Minuman</label>
+                                            <label for="floatingInput">Kategori Cucian</label>
                                             <div class="invalid-feedback">
-                                                Pilih Kategori Makanan atau Minuman.
+                                                Pilih Kategori Cucian.
                                             </div>
                                         </div>
                                     </div>
