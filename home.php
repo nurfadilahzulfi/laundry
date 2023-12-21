@@ -73,7 +73,7 @@ $string_jumlah_pesanan = implode(',', $array_jumlah_pesanan);
         <div class="card-body text-center">
             <h5 class="card-title">Laundry Zulfi - Aplikasi Transaksi Laundry kekinian yang modern</h5>
             <p class="card-text">Aplikasi Transaksi laundry yang memudahkan pelanggan dalam menangani berbagai macam hal cucian baik itu paket cucian</p>
-            <a href="Order" class="btn btn-primary">Buat Order</a>
+            <a href="Order" class="btn btn-primary">Order Cucian</a>
         </div>
     </div>
     <!-- Akhir Judul -->
@@ -92,7 +92,7 @@ $string_jumlah_pesanan = implode(',', $array_jumlah_pesanan);
                     data: {
                         labels: [<?php echo $string_menu ?>],
                         datasets: [{
-                            label: 'Jumlah Porsi Terjual',
+                            label: 'Jumlah Order Cucian',
                             data: [<?php echo $string_jumlah_pesanan ?>],
                             borderWidth: 1,
                             backgroundColor:[

@@ -17,7 +17,7 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
             <div class="row">
                 <div class="col d-flex justify-content-end">
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalTambahUser"> Tambah
-                        Menu</button>
+                        Menu Cucian</button>
                 </div>
             </div>
             <!-- Modal tambah Menu baru -->
@@ -47,9 +47,9 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="floatingInput"
                                                 placeholder="Nama Menu" name="nama_menu" required>
-                                            <label for="floatingInput">Nama Menu</label>
+                                            <label for="floatingInput">Menu Cucian</label>
                                             <div class="invalid-feedback">
-                                                Masukkan Nama Menu.
+                                                Masukkan Menu Cucian.
                                             </div>
                                         </div>
                                     </div>
@@ -91,16 +91,6 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="floatingInput"
-                                                placeholder="Stok" name="stok" required>
-                                            <label for="floatingInput">Stok</label>
-                                            <div class="invalid-feedback">
-                                                Masukan Stok.
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <div class="modal-footer">
@@ -135,13 +125,18 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                             <form form class="needs-validation" novalidate action="proses/proses_input_menu.php"
                                 method="post" enctype="multipart/form-data">
                                 <div class="row">
+                                <div class="mb-3" style="width : 350px; display:block; margin:auto; display:absolute;">
+                                    <img src="assets/img/<?php echo $row['foto'] ?>" class="img-fluid" alt="...">
+                                </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-floating mb-3">
                                             <input disabled type="text" class="form-control" id="floatingInput"
                                                 value="<?php echo $row['nama_menu']?>">
-                                            <label for="floatingInput">Nama Menu</label>
+                                            <label for="floatingInput">Menu Cucian</label>
                                             <div class="invalid-feedback">
-                                                Masukkan Nama Menu.
+                                                Masukkan Menu Cucian.
                                             </div>
                                         </div>
                                     </div>
@@ -183,16 +178,6 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                             <label for="floatingInput">Harga</label>
                                             <div class="invalid-feedback">
                                                 Masukan Harga Menu.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-floating mb-3">
-                                            <input disabled type="number" class="form-control" id="floatingInput"
-                                                value="<?php echo $row['stok']?>">
-                                            <label for="floatingInput">Stok</label>
-                                            <div class="invalid-feedback">
-                                                Masukan Stok.
                                             </div>
                                         </div>
                                     </div>
@@ -239,9 +224,9 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="floatingInput"
                                                 placeholder="Nama Menu" name="nama_menu" required value="<?php echo $row['nama_menu']?>">
-                                            <label for="floatingInput">Nama Menu</label>
+                                            <label for="floatingInput">Menu Cucian</label>
                                             <div class="invalid-feedback">
-                                                Masukkan Nama Menu.
+                                                Masukkan Menu Cucian.
                                             </div>
                                         </div>
                                     </div>
@@ -348,12 +333,11 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                     <thead>
                         <tr class="text-nowrap">
                             <th scope="col">No</th>
-                            <th scope="col">Foto Menu</th>
-                            <th scope="col">Nama Menu</th>
+                            <th scope="col">Foto Menu Cucian</th>
+                            <th scope="col">Menu Cucian</th>
                             <th scope="col">Keterangan</th>
                             <th scope="col">Kategori</th>
                             <th scope="col">Harga</th>
-                            <th scope="col">Stok</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -382,9 +366,6 @@ $select_kat_menu = mysqli_query ($conn, "SELECT id_kat_menu,kategori_menu FROM t
                             </td>
                             <td>
                                 <?php echo $row['harga'] ?>
-                            </td>
-                            <td>
-                                <?php echo $row['stok'] ?>
                             </td>
                             <td>
                                 <div class="d-flex">
